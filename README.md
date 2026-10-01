@@ -10,6 +10,25 @@ Each of the 29 playground sections gets its own:
 
 ---
 
+## Stack
+
+| Layer            | Tool / Library                       | Version    | Role                                                  |
+|------------------|--------------------------------------|------------|-------------------------------------------------------|
+| Language         | TypeScript                           | `^5.4.0`   | Type-safe test code; strict mode in `tsconfig.json`   |
+| Runtime          | Node.js                              | —                    | Executes the Playwright CLI and test specs             |
+| Test framework   | `@playwright/test`                   | `^1.47.0`  | Test discovery, assertions (`expect`), fixtures, retries|
+| Architecture    | Page Object Model                  | —                    | Keeps selectors in page classes, tests assert on POM returns |
+| Browsers         | Desktop Chrome, Firefox, Safari (WebKit) | latest        | Cross-browser matrix via `playwright.config.ts` `projects` |
+| Reporters       | `list` + `html` + `junit`           | built-in   | Console output, browsable HTML report, CI-friendly JUnit XML |
+| Reporting UI    | `playwright show-report`             | built-in   | Opens the HTML report locally after a run            |
+| Type-checking   | `tsc --noEmit`                       | `^5.4.0`   | `npm run lint` — type-check without emitting output  |
+
+All dependencies are pinned via `package.json` and locked with `package-lock.json`
+(ignored from the repo); `npx playwright install` fetches the browser binaries
+on first run.
+
+---
+
 ## Project Layout
 
 ```
