@@ -32,7 +32,7 @@ on first run.
 ## Project Layout
 
 ```
-playwrihgt_ts_playground/
+playwright-ts-playground/
 ├── pages/                          # Page Object Model classes
 │   ├── BasePage.ts
 │   ├── DynamicIdPage.ts

@@ -1,5 +1,5 @@
 {
-  "name": "uitestingplayground-playwright",
+  "name": "playwright-ts-playground",
   "version": "1.0.0",
   "description": "Playwright + TypeScript automation tests for UITestingPlayground.com using Page Object Model",
   "main": "index.js",
